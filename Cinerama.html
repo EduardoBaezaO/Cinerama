@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Cinerama </title>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/css/datepicker.css">
+    <link rel="stylesheet" href="lib/css/main.css">
+    <link href="lib/album.css" rel="stylesheet">
+    <script src="lib/js/modal.js"></script>
+  </head>
+
+  <body>
+
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <strong> Hola! ¿Aún no te haz registrado? </strong> <a href="registro.html"> Haz click aquí </a> .
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="icon/claqueta.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Cinerama
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link"> <button type="button" class="btn btn-outline-dark mx-1 my-2"> Inicio </button> </a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-dark mx-2 my-3" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> Inicio de sesión </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> ¡Bienvenido! </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-signin">
+                      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                      <h1 class="h3 mb-3 font-weight-normal"> Inicio de sesión </h1>
+                      <label for="inputEmail" class="sr-only"> Correo</label>
+                      <input type="email" id="inputEmail" class="form-control" placeholder="ejemplo@correo.com" required autofocus>
+                      <label for="inputPassword" class="sr-only"> Contraseña</label>
+                      <input type="password" id="inputPassword" class="form-control" placeholder="contraseña" required>
+                      <div class="checkbox mb-3">
+                        <label>
+                          <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                      </div>
+                      <button class="btn btn-lg btn-dark btn-block" type="submit"> Ingresar </button>
+                      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cerrar </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-dark mx-2 my-3" data-toggle="modal" data-target="#exampleModalCenter">
+              Registro
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle"> Registro </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nombres</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Apellidos</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">></span>
+                </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Direccion</label>
+              <input type="text" class="form-control" id="address" placeholder="Calle 123" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Ciudad</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                  <option value=""> </option>
+                  <option>Santiago</option>
+                  <option>Talca</option>
+                  <option>Concepcion</option>
+                  <option>Arica</option>
+                  <option>Curico</option>
+                  <option>Trempulcahue</option>
+
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Comuna</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                  <option value=""> </option>
+                  <option>Santiago</option>
+                  <option>Pirque</option>
+                  <option>La Granja</option>
+                  <option>Lo Espejo</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+            </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cerrar </button>
+                    <button type="button" class="btn btn-primary"> Confirmar </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+ <!-- -->
+    <main role="main">
+      <!-- Navegador para elegir fechas y cines a elección-->
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading"> Cinerama </h1>
+          <p class="lead text-muted"> Bienvenido a Cinerama, consulta por la película que desees en tu cine favorito. </p>
+        </div>
+
+        <div class="container navbar navbar-expand-lg navbar-light  my-2">
+        <ul class="nav">
+          <li>
+            <div class="docs-datepicker form-inline my-2  mx-2">
+              <div class="input-group">
+                <input type="text" class="form-control docs-date" name="date" placeholder="Selecciona una fecha">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="docs-datepicker-container"></div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle my-2 mx-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cine
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cine Hoyts</a>
+                <a class="dropdown-item" href="#">Cineplanet</a>
+                <a class="dropdown-item" href="#">Cinemark</a>
+                <a class="dropdown-item" href="#">Cinearte</a>
+                <a class="dropdown-item" href="#">Cine Pavillion</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle my-2 mx-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Genero
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Acción</a>
+                <a class="dropdown-item" href="#">Comedia</a>
+                <a class="dropdown-item" href="#">Románticas</a>
+                <a class="dropdown-item" href="#">Terror/Suspernso</a>
+                <a class="dropdown-item" href="#">Animadas</a>
+                <a class="dropdown-item" href="#">Ivan gay</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <button type="button" class="btn btn-outline-dark my-2 mx-2"> Buscar </button>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      </section>
+      <!-- Listado de película de estreno-->
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/Venom.jpg" height="450" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">     <b>Fecha estreno:</b> 4 de octubre 2018.
+                                        <br><b>Director:</b> Ruben Fleischer.
+                                        <br><b>Clasificación:</b> PG-13.
+                                        <br><b>Producción:</b> Avi Arad, Matt Tolmach, Amy Pascal.
+                                        <br><b>Año:</b> 2018.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="venom.html"><button type="button" class="btn btn-sm btn-outline-secondary"> Trailer </button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="right" title="Acción"> Género </button>
+                    </div>
+                    <small class="text-muted">120 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/Halloween.jpg" height="450" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">     <b>Fecha estreno:</b> 19 de octubre 2018.
+                                        <br><b>Director:</b> David Gordon Green.
+                                        <br><b>Clasificación:</b> PG-13.
+                                        <br><b>Producción:</b> Jason Blum, Malek Akkad, Bill Block.
+                                        <br><b>Año:</b> 2018.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="halloween.html"><button type="button" class="btn btn-sm btn-outline-secondary"> Trailer </button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="right" title="Terror"> Género </button>
+                    </div>
+                    <small class="text-muted">120 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/Piepequeño.jpg" height="450" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">     <b>Fecha estreno:</b> 28 de septiembre de 2018.
+                                        <br><b>Director:</b> Karey Kirkpatrick.
+                                        <br><b>Clasificación:</b> ATP.
+                                        <br><b>Producción:</b> Glenn Ficarra, John Requa, Bonne Radford.
+                                        <br><b>Año:</b> 2018.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="pequeño.html"><button type="button" class="btn btn-sm btn-outline-secondary"> Trailer </button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="right" title="Animada"> Género </button>
+                    </div>
+                    <small class="text-muted">120 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/Estrella.jpg" height="450" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">     <b>Fecha estreno:</b> 31 de agosto de 2018.
+                                        <br><b>Director:</b> Bradley Cooper.
+                                        <br><b>Clasificación:</b> ATP.
+                                        <br><b>Producción:</b> Bradley Cooper, Jon Peters, Bill Gerber, Todd Phillips, Lynette Howell Taylor.
+                                        <br><b>Año:</b> 2018.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="estrella.html"><button type="button" class="btn btn-sm btn-outline-secondary"> Trailer </button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="right" title="Romántica/Drama"> Género </button>
+                    </div>
+                    <small class="text-muted">120 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/amoruedas.jpg" height="450" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">     <b>Fecha estreno:</b> 24 de octubre de 2018 .
+                                        <br><b>Director:</b> Bryan Singer.
+                                        <br><b>Clasificación:</b> PG-13.
+                                        <br><b>Producción:</b> Graham King, Jim Beach.
+                                        <br><b>Año:</b> 2018.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="queen.html"><button type="button" class="btn btn-sm btn-outline-secondary"> Trailer </button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="right" title="Drama"> Género </button>
+                    </div>
+                    <small class="text-muted">120 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/escalofrios2.jpg" height="450" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">     <b>Fecha estreno:</b> 12 de octubre de 2018.
+                                        <br><b>Director:</b> Ari Sandel.
+                                        <br><b>Clasificación:</b> ATP.
+                                        <br><b>Producción:</b> Deborah Forte, Neal H. Moritz.
+                                        <br><b>Año:</b> 2018.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="escalofrios2.html"><button type="button" class="btn btn-sm btn-outline-secondary"> Trailer </button></a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="right" title="Terror/Animada"> Género </button>
+                    </div>
+                    <small class="text-muted">120 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Fin listado de películas de estreno -->
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="lib/js/popper.min.js"></script>
+    <script type="text/javascript" src="lib/js/pop.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://fengyuanchen.github.io/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="lib/js/datepicker.js"></script>
+    <script src="lib/js/main.js"></script>
+
+
+  </body>
+  </html>
